@@ -111,7 +111,7 @@ export default Vue.extend({
     )
 
     /// Body
-    let body: VNode
+    let body: VNode | VNode[]
     if (Array.isArray(this.$slots.default)) {
       const tag = get(this.$slots, ['default', 0, 'tag'], undefined)
       body = tag ? this.$slots.default : h('p', this.$slots.default)
