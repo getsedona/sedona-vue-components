@@ -1,0 +1,21 @@
+{
+  "prettier.printWidth": 100,
+  "eslint.alwaysShowStatus": true,
+  "editor.formatOnSave": false,
+  "eslint.autoFixOnSave": false,
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": false
+    },
+    "javascriptreact",
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    }
+  ]
+}

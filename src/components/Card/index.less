@@ -1,0 +1,62 @@
+@import "~sedona-components/src/common/index";
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  border-radius: var(--common-borderRadius-primary);
+  box-shadow: inset 0 0 0 1px var(--common-baseColor-divider);
+  padding: var(--common-indent-double);
+
+  &--dark {
+    #common.box-dark();
+    box-shadow: none;
+  }
+
+  &--light {
+    #common.box-light();
+    box-shadow: none;
+  }
+
+  a {
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      border-radius: var(--common-borderRadius-primary);
+    }
+  }
+}
+
+.card__accent {
+  margin-top: ~"calc(var(--common-indent-double) * -1)";
+  margin-right: ~"calc(var(--common-indent-double) * -1)";
+  margin-bottom: var(--common-indent-base);
+  margin-left: ~"calc(var(--common-indent-double) * -1)";
+}
+
+.card__media {
+  position: relative;
+  padding-bottom: 66.66%;
+
+  img,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--common-borderRadius-primary) var(--common-borderRadius-primary) 0 0;
+  }
+}
+
+.card__content {
+  & + & {
+    margin-top: var(--common-indent-base);
+  }
+}
