@@ -98,20 +98,20 @@ export default Vue.extend({
     },
   },
   render(h: CreateElement): VNode {
-    let accent: string
+    let accent = ''
     if (this.dark) accent = 'card--dark'
     else if (this.light) accent = 'card--light'
 
     /// Title
+    const titleText: VNode | string = this.to === '' ? this.title : h('router-link', { props: { to: this.to } }, this.title)
     const title = h(
       this.titleTag,
-      ...(this.to === ''
-        ? [this.title]
-        : [h('router-link', { props: { to: this.to } }, this.title)])
+      {},
+      [titleText]
     )
 
     /// Body
-    let body: VNode | VNode[]
+    let body: VNode | VNode[] | string = ''
     if (Array.isArray(this.$slots.default)) {
       const tag = get(this.$slots, ['default', 0, 'tag'], undefined)
       body = tag ? this.$slots.default : h('p', this.$slots.default)

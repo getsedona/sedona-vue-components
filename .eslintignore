@@ -1,5 +1,6 @@
 node_modules/
 styleguide/
+dist/
 
 webpack.config.js
 styleguide.config.js

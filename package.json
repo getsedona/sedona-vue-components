@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo 'test'",
     "dev": "vue-styleguidist server",
+    "build": "rm -rf dist && tsc",
     "styleguide:build": "vue-styleguidist build",
     "lint": "eslint --ext .js,.ts .",
     "lint:fix": "eslint --fix --ext .js,.ts .",
@@ -13,7 +14,15 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/getsedona/sedona-vue-components.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/getsedona/sedona-vue-components/issues"
+  },
+  "homepage": "https://github.com/getsedona/sedona-vue-components",
   "dependencies": {
     "lodash": "^4.17.15",
     "sedona-components": "^4.9.7"

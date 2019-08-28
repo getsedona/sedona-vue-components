@@ -3,19 +3,17 @@
     "experimentalDecorators": true,
     "target": "esnext",
     "module": "esnext",
-    "jsx": "preserve",
-    "importHelpers": true,
     "moduleResolution": "node",
+    "declaration": true,
+    "importHelpers": true,
+    "outDir": "dist",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "types": ["jest"],
-    "paths": {
-      "@/*": ["src/*"]
-    },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "strict": true,
+    "lib": ["esnext", "dom", "dom.iterable"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "tests/**/*.ts", "tests/**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }

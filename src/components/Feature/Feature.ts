@@ -1,5 +1,7 @@
 import Vue, { VNode, CreateElement, PropType } from 'vue'
 
+import './index.less'
+
 const defaultAvatarStyle = {
   backgroundColor: '#fed891',
   width: '150px',
