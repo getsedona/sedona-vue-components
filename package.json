@@ -1,8 +1,9 @@
 {
-  "name": "sedona-vue-components",
+  "name": "@sedona/vue-components",
   "version": "1.0.0",
   "description": "Sedona vue components",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo 'test'",
     "dev": "vue-styleguidist server",
@@ -12,7 +13,12 @@
     "lint:fix": "eslint --fix --ext .js,.ts .",
     "gh-pages": "gh-pages -d styleguide"
   },
-  "keywords": [],
+  "keywords": [
+    "vue",
+    "vue-components",
+    "sedona",
+    "typescript"
+  ],
   "author": "",
   "repository": {
     "type": "git",
@@ -59,7 +65,7 @@
     "react-docgen": "^2.21.0",
     "ts-jest": "^24.0.2",
     "ts-loader": "^6.0.4",
-    "typescript": "^3.5.3",
+    "typescript": "^3.6.2",
     "vue": "^2.6.10",
     "vue-jest": "^3.0.4",
     "vue-loader": "^15.7.1",
