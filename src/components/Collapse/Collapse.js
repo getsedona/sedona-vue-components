@@ -1,17 +1,17 @@
-import Vue, { CreateElement, VNode, PropType } from 'vue'
+import Vue from 'vue'
 import './index.less'
 
 export default Vue.extend({
   name: 'Collapse',
   props: {
     title: {
-      type: String as PropType<string>,
+      type: String,
       default: 'Collapse Title',
     },
   },
   data() {
     return {
-      isShown: false as boolean,
+      isShown: false,
     }
   },
   methods: {
@@ -20,27 +20,27 @@ export default Vue.extend({
      *
      * @public
      */
-    open(): void {
+    open() {
       this.isShown = true
     },
     /**
-    * Close panel content
-    *
-    * @public
-    */
-    close(): void {
+     * Close panel content
+     *
+     * @public
+     */
+    close() {
       this.isShown = false
     },
     /**
-   * Toggle panel content
-   *
-   * @public
-   */
-    toggle(): void {
+     * Toggle panel content
+     *
+     * @public
+     */
+    toggle() {
       this.isShown = !this.isShown
     },
   },
-  render(h: CreateElement): VNode {
+  render(h) {
     const title = this.$slots.title
       ? this.$slots.title
       : h('h3', [
@@ -50,7 +50,7 @@ export default Vue.extend({
             domProps: { type: 'button' },
             class: 'link',
             on: {
-              click: (): void => this.toggle(),
+              click: () => this.toggle(),
             },
           },
           this.title

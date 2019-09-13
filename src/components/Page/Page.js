@@ -1,10 +1,10 @@
-import Vue, { CreateElement, VNode } from 'vue'
+import Vue from 'vue'
 import './page.less'
 
 export default Vue.extend({
   name: 'Page',
   functional: true,
-  render(h: CreateElement, { slots }): VNode {
+  render(h, { slots }) {
     return h('div', { class: 'page' }, slots().default)
   },
 })

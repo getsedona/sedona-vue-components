@@ -1,95 +1,111 @@
-const allExtensions = ['.ts', '.tsx', '.d.ts', '.js', '.jsx']
-
 module.exports = {
-    root: true,
-    parser: '@typescript-eslint/parser',
-    env: {
-        es6: true,
-        jest: true,
-        node: true,
-    },
-    parserOptions: {
-        ecmaVersion: 2018,
-        sourceType: 'module',
-        project: './tsconfig.json',
-    },
-    plugins: ['@typescript-eslint', 'unicorn', 'import', 'jest'],
-    extends: [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:unicorn/recommended',
-        'plugin:promise/recommended',
-        'plugin:unicorn/recommended',
+  root: true,
+  env: {
+    node: true,
+    jest: true,
+  },
+  extends: [
+    'plugin:vue/essential',
+    'plugin:vue/base',
+    'plugin:vue/strongly-recommended',
+    'plugin:vue/recommended',
+    'plugin:promise/recommended',
+    'eslint:recommended',
+    'plugin:unicorn/recommended',
+    'plugin:jsdoc/recommended',
+  ],
+  rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'comma-dangle': [
+      'error',
+      {
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        functions: 'never',
+      },
     ],
-    settings: {
-        'import/extensions': allExtensions,
-        'import/parsers': {
-            '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
+    'arrow-parens': ['error', 'always'],
+    semi: ['error', 'never'],
+    quotes: ['error', 'single'],
+    indent: [
+      'error',
+      2,
+      {
+        SwitchCase: 1,
+        VariableDeclarator: 2,
+        outerIIFEBody: 0,
+        MemberExpression: 1,
+        FunctionDeclaration: { parameters: 'first' },
+        FunctionExpression: { parameters: 'first' },
+        CallExpression: { arguments: 'first' },
+        ArrayExpression: 1,
+        ObjectExpression: 1,
+        ImportDeclaration: 1,
+        flatTernaryExpressions: false,
+      },
+    ],
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'never',
+        named: 'never',
+        asyncArrow: 'always',
+      },
+    ],
+    'unicorn/prevent-abbreviations': [
+      'error',
+      {
+        extendDefaultReplacements: false,
+        replacements: {
+          e: {
+            event: true,
+          },
+          er: {
+            error: true,
+          },
+          err: {
+            error: true,
+          },
+          warn: {
+            warning: true,
+          },
+          val: {
+            value: true,
+          },
         },
-        'import/resolver': {
-            node: {
-                extensions: allExtensions,
-            },
+      },
+    ],
+    'unicorn/filename-case': [
+      'error',
+      {
+        cases: {
+          camelCase: true,
+          pascalCase: true,
         },
-        'import/docstyle': ['jsdoc', 'tomdoc'],
+      },
+    ],
+  },
+  parserOptions: {
+    parser: 'babel-eslint',
+  },
+  overrides: [
+    {
+      files: ['**/__tests__/*.{j,t}s?(x)'],
+      env: {
+        jest: true,
+      },
     },
-    rules: {
-        'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-        'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-        'comma-dangle': [
-            'error',
-            {
-                arrays: 'always-multiline',
-                objects: 'always-multiline',
-                functions: 'never',
-            },
-        ],
-        'arrow-parens': ['error', 'always'],
-        semi: ['error', 'never'],
-        indent: [
-            'error',
-            2,
-            {
-                SwitchCase: 1,
-                VariableDeclarator: 2,
-                outerIIFEBody: 0,
-                MemberExpression: 1,
-                FunctionDeclaration: { parameters: 'first' },
-                FunctionExpression: { parameters: 'first' },
-                CallExpression: { arguments: 'first' },
-                ArrayExpression: 1,
-                ObjectExpression: 1,
-                ImportDeclaration: 1,
-                flatTernaryExpressions: false,
-            },
-        ],
-        'no-var': 'error',
-        'unicorn/filename-case': [
-            'error',
-            { cases: { pascalCase: true, kebabCase: true } },
-        ],
-        'unicorn/prevent-abbreviations': [
-            'error',
-            {
-                extendDefaultReplacements: false,
-                replacements: {
-                    e: {
-                        event: true,
-                    },
-                    er: {
-                        error: true,
-                    },
-                    err: {
-                        error: true,
-                    },
-                    warn: {
-                        warning: true,
-                    },
-                    val: {
-                        value: true,
-                    },
-                },
-            },
-        ],
+    {
+      files: ['*.vue'],
+      rules: { indent: 'off', 'vue/script-indent': ['error', 2, { baseIndent: 1 }] },
     },
+  ],
+  settings: {
+    jsdoc: {
+      tagNamePreference: {
+        slot: 'slot',
+      },
+    },
+  },
 }

@@ -5,10 +5,7 @@ module.exports = {
   pagePerSection: true,
   title: "Sedona Vue Components",
   usageMode: "expand",
-  require: [
-    path.join(__dirname, "src/assets/less/index.less"),
-    path.join(__dirname, "router-mock.js")
-  ],
+  require: [path.join(__dirname, "src/assets/less/index.less"), path.join(__dirname, "router-mock.js")],
   styles: {
     Logo: {
       logo: {
@@ -27,7 +24,6 @@ module.exports = {
       ]
     }
   },
-  webpackConfig: require("./webpack.config"),
   serverPort: 3000,
   editorConfig: {
     theme: "xq-light"
@@ -64,7 +60,7 @@ module.exports = {
     {
       name: "UI Components",
       content: "docs/ui.md",
-      components: "./src/components/**/[A-Z]*.ts",
+      components: ["./src/components/**/[A-Z]*.vue", "./src/components/**/[A-Z]*.js"],
       sectionDepth: 1,
       ignore: "src/components/Page/Page.ts"
     }

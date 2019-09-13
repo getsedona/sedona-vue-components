@@ -1,4 +1,4 @@
-import Vue, { VNode, CreateElement, PropType } from 'vue'
+import Vue from 'vue'
 
 import './index.less'
 
@@ -11,18 +11,18 @@ const defaultAvatarStyle = {
 
 export default Vue.extend({
   name: 'Feature',
+  functional: true,
   props: {
     title: {
-      type: String as PropType<string>,
+      type: String,
       default: '',
     },
     subTitle: {
-      type: String as PropType<string>,
+      type: String,
       default: '',
     },
   },
-  functional: true,
-  render(h: CreateElement, { slots, props }): VNode {
+  render(h, { slots, props }) {
     const avatarSlot =
       /** @slot Use this slot to have a header */
       slots().avatar ||
