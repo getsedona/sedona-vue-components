@@ -1,11 +1,28 @@
-import 'jest'
-import { shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import Feature from './Feature'
 
+const WrappedFeature = {
+  components: { Feature },
+  template: `
+    <div>
+      <Feature v-bind="$attrs" v-on="$listeners" />
+    </div>
+  `,
+}
 
-describe('subtracts 5 - 1 to equal 4 in TypeScript', () => {
-  test('sad', () => {
-    const wrapper = shallowMount(Feature)
+const wrapper = mount(WrappedFeature, {
+  propsData: {
+    title: 'Test title',
+  },
+})
+
+describe('Feature Component', () => {
+  test('test for props', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
+    expect(
+      wrapper
+        .find('h3')
+        .text()
+    ).toBe('Test title')
   })
 })
