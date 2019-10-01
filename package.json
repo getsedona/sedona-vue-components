@@ -11,7 +11,6 @@
     "build": "vue-cli-service build --target lib --name sedona-vue-components src/index.js",
     "build:styleguide": "vue-cli-service styleguidist:build",
     "lint": "vue-cli-service lint --ext .js,.vue .",
-    "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit",
     "prepare": "npm run build"
   },
@@ -22,7 +21,6 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
-    "@vue/cli-plugin-e2e-cypress": "^3.11.0",
     "@vue/cli-plugin-eslint": "^3.11.0",
     "@vue/cli-plugin-unit-jest": "^3.11.0",
     "@vue/cli-service": "^3.11.0",
