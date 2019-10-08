@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "sedona-components": "^4.9.8",
+    "sedona-components": "^4.10.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
@@ -29,7 +29,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "eslint": "^5.16.0",
-    "eslint-plugin-jsdoc": "^15.9.5",
+    "eslint-plugin-jsdoc": "^15.9.10",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-unicorn": "^10.0.0",
     "eslint-plugin-vue": "^5.0.0",
