@@ -3,7 +3,7 @@
 Basic example
 
 ```js
-<Collapse>
+<Collapse title="Collapse One">
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
   natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
   pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
@@ -11,7 +11,7 @@ Basic example
   mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
 </Collapse>
 
-<Collapse>
+<Collapse title="Collapse Two">
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
   natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
   pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
@@ -19,7 +19,7 @@ Basic example
   mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
 </Collapse>
 
-<Collapse>
+<Collapse title="Collapse Three">
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
   natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
   pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
@@ -31,9 +31,9 @@ Basic example
 Example with named slots
 
 ```js
-<Collapse ref="colapse">
+<Collapse ref="collapse">
     <template v-slot:title>
-        <img src="https://placekitten.com/200/140" @click="$refs.colapse.toggle()">
+        <img src="https://placekitten.com/200/140" @click="$refs.collapse.toggle()">
     </template>
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
   natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
@@ -46,7 +46,7 @@ Example with named slots
 Example with chils components
 
 ```js
-<Collapse>
+<Collapse title="Collapse Title">
   <section class="scene">
     <div class="grid">
       <div class="grid__list  grid__list--amara">
