@@ -6,7 +6,7 @@ export default Vue.extend({
   props: {
     title: {
       type: String,
-      default: 'Collapse Title',
+      default: '',
     },
   },
   data() {
@@ -41,26 +41,28 @@ export default Vue.extend({
     },
   },
   render(h) {
-    const title = this.$slots.title
-      ? this.$slots.title
-      : h('h3', [
-        h(
-          'button',
-          {
-            domProps: { type: 'button' },
-            class: 'link',
-            on: {
-              click: () => this.toggle(),
-            },
+    let title
+    if (this.$slots.title) {
+      title = this.$slots.title
+    } else if (this.title !== '') {
+      title = h(
+        'button',
+        {
+          domProps: { type: 'button' },
+          class: 'link',
+          on: {
+            click: () => this.toggle(),
           },
-          this.title
-        ),
-      ])
+        },
+        this.title
+      )
+    }
+
     const content = h(
       'div',
       { class: ['collapse', ...(this.isShown ? ['collapse--show'] : [])] },
       this.$slots.default
     )
-    return h('div', { class: 'wysiwyg' }, [title, content])
+    return h('div', [title, content])
   },
 })
