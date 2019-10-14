@@ -10,7 +10,7 @@
     "dev:styleguide": "vue-cli-service styleguidist",
     "build": "vue-cli-service build --target lib --name sedona-vue-components src/index.js",
     "build:styleguide": "vue-cli-service styleguidist:build",
-    "lint": "vue-cli-service lint --ext .js,.vue .",
+    "lint": "vue-cli-service lint --fix --ext .js,.vue .",
     "test:unit": "vue-cli-service test:unit",
     "prepare": "npm run build"
   },
