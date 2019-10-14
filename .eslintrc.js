@@ -80,6 +80,7 @@ module.exports = {
       'error',
       {
         cases: {
+          kebabCase: true,
           camelCase: true,
           pascalCase: true,
         },
