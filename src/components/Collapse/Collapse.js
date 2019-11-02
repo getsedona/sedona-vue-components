@@ -8,11 +8,29 @@ export default Vue.extend({
       type: String,
       default: '',
     },
+    value: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
-      isShown: false,
+      isShown: this.value,
     }
+  },
+  watch: {
+    isShown(value) {
+      /**
+       * Change state event
+       *
+       * @since 0.0.3
+       * @type {boolean}
+       */
+      this.$emit('input', value)
+    },
+    value(newValue) {
+      this.isShown = newValue
+    },
   },
   methods: {
     /**
