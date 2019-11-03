@@ -1,12 +1,15 @@
 Содержит в себе акцентный элемент и пояснительный текст. Подойдет для оформления преимуществ, списка сотрудников или услуг и т. п.
 
-Basic example
+## Examples
+<hr>
+
+### Basic example
 
 ```js
 <Feature title="Feature Title" sub-title="Hello, world!" />
 ```
 
-Example with named slots
+### Example with named slots
 
 ```js
 <Feature title="Hello">
@@ -22,7 +25,7 @@ Example with named slots
 </Feature>
 ```
 
-Example with grid
+### Example with grid
 
 ```js
 <section class="scene" style="max-width: 800px">

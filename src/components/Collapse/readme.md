@@ -1,6 +1,9 @@
-Раскрывающиеся блоки.
+Collapsed block
 
-Basic example
+## Examples
+<hr>
+
+### Basic example
 
 ```js
 <Collapse title="Collapse One">
@@ -28,7 +31,7 @@ Basic example
 </Collapse>
 ```
 
-Example with named slots
+### Example with named slots
 
 ```js
 <Collapse ref="collapse">
@@ -43,7 +46,7 @@ Example with named slots
 </Collapse>
 ```
 
-Example with chils components
+### Example with chils components
 
 ```js
 <Collapse title="Collapse Title">
@@ -68,14 +71,14 @@ Example with chils components
 </Collapse>
 ```
 
-Example with v-model
+### Example with v-model
 
 ```vue
 <template>
   <div>
-    <h2>
+    <strong>
       {{ isOpen ? 'Collapse is open' : 'Collapse is closed' }}
-    </h2>
+    </strong>
     <br>
     <input v-model="isOpen" type="checkbox"> state
     <hr>
@@ -98,8 +101,8 @@ Example with v-model
 </script>
 ```
 
-## Модификаторы
+## CSS modifiers
 
 ### `collapse`
 
-- `collapse--show` – раскрывает компонент
+- `collapse--show` – open component

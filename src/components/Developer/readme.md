@@ -1,10 +1,13 @@
-Basic example
+## Examples
+<hr>
+
+### Basic example
 
 ```js
 <Developer year="2018" href="https://constlab.com/" />
 ```
 
-Example with default params
+### Example with default params
 
 ```js
 <Developer />
