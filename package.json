@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.10",
-    "sedona-components": "~4.9.8",
+    "sedona-components": "~4.10.1",
     "vue": "^2.6.10"
   },
   "devDependencies": {
