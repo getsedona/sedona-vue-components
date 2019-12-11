@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <developer year="2003" />
+
     <feature
       title="Title"
       sub-title="Subtitle"
@@ -9,13 +11,14 @@
 </template>
 
 <script>
-  import { Feature, ProductCard } from '../src'
+  import { Feature, ProductCard, Developer } from '../src'
 
   export default {
     name: 'App',
     components: {
       Feature,
       ProductCard,
+      Developer,
     },
   }
 </script>

@@ -18,7 +18,7 @@ export default Vue.extend({
      */
     href: {
       type: String,
-      default: 'https://constlab.ru/',
+      default: 'https://constlab.ru',
     },
   },
   render(h, { props }) {
@@ -27,7 +27,7 @@ export default Vue.extend({
         'svg',
         {
           class: 'developer__name',
-          attrs: { width: 60, height: 10, viewBox: '0 0 60.125 10.125' },
+          attrs: { width: 60, height: 10, viewBox: '0 0 60.125 10.125', 'stroke-width': 0 },
         },
         [
           h('path', {
