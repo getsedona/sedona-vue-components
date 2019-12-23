@@ -23,11 +23,8 @@ export default Vue.extend({
     },
   },
   render(h, { slots, props }) {
-    const listClass = props.view ? `grid__list--${props.view}` : undefined
+    const gridClass = props.view ? `grid--${props.view}` : undefined
 
-    return h('div', { class: 'grid' }, [
-      h('div', { class: 'grid__wrap' }),
-      [h('div', { class: ['grid__list', listClass] }, slots().default)],
-    ])
+    return h('div', { class: ['grid', gridClass] }, slots().default)
   },
 })
