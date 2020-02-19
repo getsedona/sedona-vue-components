@@ -25,9 +25,6 @@ module.exports = {
     }
   },
   serverPort: 3000,
-  editorConfig: {
-    theme: "xq-light"
-  },
   theme: {
     fontFamily: {
       monospace: ["Menlo", "Consolas", '"Liberation Mono"', "monospace"]
@@ -37,7 +34,7 @@ module.exports = {
       sidebarBackground: "#009688"
     },
     sidebarWidth: 250,
-    maxWidth: "none"
+    maxWidth: "1000px"
   },
   sections: [
     {
