@@ -1,23 +1,53 @@
 <template>
   <div id="app">
-    <developer year="2003" />
+    <page>
+      <scene>
+        <grid view="amara">
+          <grid-item>
+            <feature
+              title="Title"
+              sub-title="Subtitle"
+            />
+          </grid-item>
+          <grid-item>
+            <feature
+              title="Title"
+              sub-title="Subtitle"
+            />
+          </grid-item>
+          <grid-item>
+            <feature
+              title="Title"
+              sub-title="Subtitle"
+            />
+          </grid-item>
+          <grid-item>
+            <feature
+              title="Title"
+              sub-title="Subtitle"
+            />
+          </grid-item>
+        </grid>
+      </scene>
 
-    <feature
-      title="Title"
-      sub-title="Subtitle"
-    />
-    <product-card />
+      <scene>
+        <developer year="2020" />
+      </scene>
+    </page>
   </div>
 </template>
 
 <script>
-  import { Feature, ProductCard, Developer } from '../src'
+  import { Page, Scene, Grid, GridItem, Feature, Developer } from '../src'
 
   export default {
     name: 'App',
     components: {
+      Page,
+      Scene,
+      Grid,
+      GridItem,
       Feature,
-      ProductCard,
       Developer,
     },
   }
