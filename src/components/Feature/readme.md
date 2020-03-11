@@ -1,6 +1,7 @@
 Содержит в себе акцентный элемент и пояснительный текст. Подойдет для оформления преимуществ, списка сотрудников или услуг и т. п.
 
 ## Examples
+
 <hr>
 
 ### Basic example
@@ -29,21 +30,19 @@
 
 ```js
 <section class="scene" style="max-width: 800px">
-  <div class="grid">
-    <div class="grid__list  grid__list--amara">
-      <div class="grid__item">
-        <Feature title="Feature One" sub-title="Hello, world!" />
-      </div>
-      <div class="grid__item">
-        <Feature title="Feature Two" sub-title="Hello, world!" />
-      </div>
-      <div class="grid__item">
-        <Feature title="Feature Three" sub-title="Hello, world!" />
-      </div>
-      <div class="grid__item">
-        <Feature title="Feature Four" sub-title="Hello, world!" />
-      </div>
-    </div>
-  </div>
+  <grid view="amara">
+    <grid-item>
+      <Feature title="Feature One" sub-title="Hello, world!" />
+    </grid-item>
+    <grid-item>
+      <Feature title="Feature Two" sub-title="Hello, world!" />
+    </grid-item>
+    <grid-item>
+      <Feature title="Feature Three" sub-title="Hello, world!" />
+    </grid-item>
+    <grid-item>
+      <Feature title="Feature Four" sub-title="Hello, world!" />
+    </grid-item>
+  </grid>
 </section>
 ```
