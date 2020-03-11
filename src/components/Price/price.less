@@ -1,0 +1,40 @@
+.price-tag {
+  white-space: nowrap;
+}
+
+.price-tag {
+  &--new {
+    color: var(--common-accentColor-primary);
+  }
+
+  &--old {
+    color: var(--common-baseColor-hint);
+  }
+}
+
+.price-tag__accent {
+  font-family: var(--common-fontFamily-secondary);
+
+  .price-tag--new & {
+    #base.h3();
+  }
+
+  .price-tag--old & {
+    position: relative;
+
+    &::before {
+      content: '';
+      left: -4px;
+      right: -4px;
+      top: 50%;
+      height: 1px;
+      background-color: var(--common-baseColor-divider);
+      position: absolute;
+      transform: rotate(15deg);
+    }
+  }
+}
+
+.price-tag__content {
+  #common.text-small();
+}
