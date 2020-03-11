@@ -1,31 +1,31 @@
-const { VueLoaderPlugin } = require("vue-loader");
+const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
   resolve: {
-    extensions: [".ts", ".js"]
+    extensions: ['.ts', '.js'],
   },
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: "vue-loader"
+        loader: 'vue-loader',
       },
       {
         test: /\.ts$/,
-        loader: "ts-loader",
-        options: { appendTsSuffixTo: [/\.vue$/] }
+        loader: 'ts-loader',
+        options: { appendTsSuffixTo: [/\.vue$/] },
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
-          options: require("./babel.config")
-        }
+          loader: 'babel-loader',
+          options: require('./babel.config'),
+        },
       },
       {
         test: /\.css$/,
-        use: ["vue-style-loader", "css-loader"]
+        use: ['vue-style-loader', 'css-loader'],
       },
       {
         test: /\.less$/,
@@ -37,15 +37,15 @@ module.exports = {
             },
             "less-loader"
           ], */
-        use: ["vue-style-loader", "css-loader", "less-loader"]
+        use: ['vue-style-loader', 'css-loader', 'less-loader'],
       },
       {
         test: /\.(js|vue)$/,
         exclude: /node_modules/,
-        loader: "eslint-loader",
-        enforce: "pre"
-      }
-    ]
+        loader: 'eslint-loader',
+        enforce: 'pre',
+      },
+    ],
   },
-  plugins: [new VueLoaderPlugin()]
-};
+  plugins: [new VueLoaderPlugin()],
+}

@@ -1,19 +1,20 @@
 {
   "name": "@getsedona/vue-components",
   "version": "0.1.1",
-  "main": "src/index.js",
-  "module": "src/index.js",
-  "types": "types/index.d.ts",
   "scripts": {
+    "build": "vue-cli-service build --target lib --name sedona-vue-components src/index.js",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint --fix --ext .js,.vue .",
+    "build:styleguide": "vue-cli-service styleguidist:build",
     "dev": "npm run dev:styleguide",
     "dev:example": "vue-cli-service serve --port 3001 example/main.js",
     "dev:styleguide": "vue-cli-service styleguidist",
-    "build": "vue-cli-service build --target lib --name sedona-vue-components src/index.js",
-    "build:styleguide": "vue-cli-service styleguidist:build",
-    "lint": "vue-cli-service lint --fix --ext .js,.vue .",
-    "test:unit": "vue-cli-service test:unit",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "styleguide": "vue-cli-service styleguidist",
+    "styleguide:build": "vue-cli-service styleguidist:build"
   },
+  "main": "src/index.js",
+  "module": "src/index.js",
   "dependencies": {
     "core-js": "^3.6.4",
     "sedona-components": "^4.10.2",
@@ -39,5 +40,6 @@
     "sass-resources-loader": "^2.0.1",
     "vue-cli-plugin-styleguidist": "^4.13.1",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "types": "types/index.d.ts"
 }
