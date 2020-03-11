@@ -25,6 +25,6 @@ export default Vue.extend({
   render(h, { slots, props }) {
     const gridClass = props.view ? `grid--${props.view}` : undefined
 
-    return h('div', { class: ['grid', gridClass] }, slots().default)
+    return <div class={['grid', gridClass]}>{slots().default}</div>
   },
 })

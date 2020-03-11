@@ -4,6 +4,6 @@ export default Vue.extend({
   name: 'GridItem',
   functional: true,
   render(h, { slots }) {
-    return h('div', { class: 'grid__item' }, slots().default)
+    return <div class="grid__item">{slots().default}</div>
   },
 })

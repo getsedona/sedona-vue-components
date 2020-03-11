@@ -58,29 +58,29 @@ export default Vue.extend({
       this.isShown = !this.isShown
     },
   },
-  render(h) {
+  render() {
     let title
     if (this.$slots.title) {
       title = this.$slots.title
     } else if (this.title !== '') {
-      title = h(
-        'button',
-        {
-          domProps: { type: 'button' },
-          class: 'link',
-          on: {
-            click: () => this.toggle(),
-          },
-        },
-        this.title
+      title = (
+        <button class="link" type="button" onClick={() => this.toggle()}>
+          {this.title}
+        </button>
       )
     }
 
-    const content = h(
-      'div',
-      { class: ['collapse', ...(this.isShown ? ['collapse--show'] : [])] },
-      this.$slots.default
+    const content = (
+      <div class={['collapse', ...(this.isShown ? ['collapse--show'] : [])]}>
+        {this.$slots.default}
+      </div>
     )
-    return h('div', [title, content])
+
+    return (
+      <div>
+        {title}
+        {content}
+      </div>
+    )
   },
 })
