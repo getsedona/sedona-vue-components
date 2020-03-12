@@ -46,28 +46,26 @@ Collapsed block
 </Collapse>
 ```
 
-### Example with chils components
+### Example with child components
 
 ```js
 <Collapse title="Collapse Title">
-  <section class="scene">
-    <div class="grid">
-      <div class="grid__list  grid__list--amara">
-        <div class="grid__item">
+  <scene>
+    <grid view="amara">
+        <grid-item>
           <Feature title="Feature One" sub-title="Hello, world!" />
-        </div>
-        <div class="grid__item">
+        </grid-item>
+        <grid-item>
           <Feature title="Feature Two" sub-title="Hello, world!" />
-        </div>
-        <div class="grid__item">
+        </grid-item>
+        <grid-item>
           <Feature title="Feature Three" sub-title="Hello, world!" />
-        </div>
-        <div class="grid__item">
+        </grid-item>
+        <grid-item>
           <Feature title="Feature Four" sub-title="Hello, world!" />
-        </div>
-      </div>
-    </div>
-  </section>
+        </grid-item>
+      </grid>
+  </scene>
 </Collapse>
 ```
 
