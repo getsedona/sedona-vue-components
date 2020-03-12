@@ -1,14 +1,10 @@
 import Vue from 'vue'
-import GridItem from './GridItem'
 
 import './index.less'
 
 export default Vue.extend({
   name: 'Grid',
   functional: true,
-  components: {
-    GridItem,
-  },
   props: {
     /**
      * Grid layout view

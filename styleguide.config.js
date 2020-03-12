@@ -1,9 +1,11 @@
-const path = require("path");
+const path = require('path')
+const package = require('./package.json')
 
 module.exports = {
   defaultExample: false,
   pagePerSection: true,
   title: 'Sedona Vue Components',
+  version: `v${package.version}`,
   usageMode: 'expand',
   require: [
     path.join(__dirname, 'src/assets/less/index.less'),
@@ -48,15 +50,13 @@ module.exports = {
       name: 'Layout',
       description: 'Layout description',
       content: 'docs/layout.md',
-      components: [
-        'src/components/Page/Page.js',
-        'src/components/Scene/Scene.js',
-      ],
+      components: ['./src/components/Page/Page.js', './src/components/Scene/Scene.js'],
       sectionDepth: 1,
       sections: [
         {
           name: 'Grid',
-          content: 'docs/grid.md',
+          description: 'Grid layout component ',
+          components: ['./src/components/Grid/Grid.js', './src/components/Grid/GridItem.js'],
         },
       ],
     },
@@ -65,7 +65,12 @@ module.exports = {
       content: 'docs/ui.md',
       components: ['./src/components/**/[A-Z]*.vue', './src/components/**/[A-Z]*.js'],
       sectionDepth: 1,
-      ignore: 'src/components/Page/Page.ts',
+      ignore: [
+        './src/components/Page/Page.js',
+        './src/components/Grid/Grid.js',
+        './src/components/Grid/GridItem.js',
+        './src/components/Scene/Scene.js',
+      ],
     },
   ],
 }
