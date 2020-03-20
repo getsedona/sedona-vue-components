@@ -17,7 +17,7 @@
   "module": "src/index.js",
   "dependencies": {
     "core-js": "^3.6.4",
-    "sedona-components": "^4.10.2",
+    "sedona-components": "^4.9.* | ^4.10.*",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -38,7 +38,7 @@
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
     "sass-resources-loader": "^2.0.1",
-    "vue-cli-plugin-styleguidist": "^4.13.1",
+    "vue-cli-plugin-styleguidist": "^4.14.0",
     "vue-template-compiler": "^2.6.11"
   },
   "types": "types/index.d.ts"
