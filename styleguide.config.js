@@ -1,11 +1,11 @@
 const path = require('path')
-const package = require('./package.json')
+const npmPackage = require('./package.json')
 
 module.exports = {
   defaultExample: false,
   pagePerSection: true,
   title: 'Sedona Vue Components',
-  version: `v${package.version}`,
+  version: `v${npmPackage.version}`,
   usageMode: 'expand',
   require: [
     path.join(__dirname, 'src/assets/less/index.less'),
@@ -63,7 +63,7 @@ module.exports = {
     {
       name: 'UI Components',
       content: 'docs/ui.md',
-      components: ['./src/components/**/[A-Z]*.vue', './src/components/**/[A-Z]*.js'],
+      components: ['./src/components/**/[A-Z]*.vue', './src/components/**/[A-Z]*.js', './src/components/**/[A-Z]*.jsx'],
       sectionDepth: 1,
       ignore: [
         './src/components/Page/Page.js',

@@ -48,7 +48,7 @@ Collapsed block
 
 ### Example with child components
 
-```js
+```jsx
 <Collapse title="Collapse Title">
   <scene>
     <grid view="amara">
