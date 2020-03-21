@@ -16,7 +16,6 @@
   "main": "src/index.js",
   "module": "src/index.js",
   "dependencies": {
-    "core-js": "^3.6.4",
     "sedona-components": "^4.*",
     "vue": "^2.6.11"
   },
